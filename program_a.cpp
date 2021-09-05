@@ -105,8 +105,8 @@ int main(int argc, char **argv){
     send(sock, data, strlen(data), 0);
     cout << "Data sent: " << data << endl;
     valread = read(sock, buffer, 1024);
-    cout << "Transmisssion succeded message from server: " << buffer << endl; //Should read "Transmisssion succeded message from server: XXXX" when connection succeeds
-    logFile << "Transmisssion succeded message from server: " << buffer << endl;
+    cout << "Transmission succeeded message from server: " << buffer << endl; //Should read "Transmisssion succeded message from server: XXXX" when connection succeeds
+    logFile << "Transmission succeeded message from server: " << buffer << endl;
 
     //Get exit key press and log it
     cout << "Enter any key to exit" << endl;
