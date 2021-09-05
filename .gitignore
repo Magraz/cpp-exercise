@@ -1,0 +1,10 @@
+#vscode specific
+.vscode
+
+#binaries
+program_a
+program_b
+
+#logs
+client.log
+server.log
