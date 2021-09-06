@@ -66,8 +66,8 @@ Data sent: 1,3,5,13,14,14,15,19,19,20
 Transmission succeeded message from server: DONE!
 Enter any key to exit: 
 ```
-We enter the keys to exit and the logs would show the following:
-* server.log
+We enter the keys to exit and the logs show the following for this example:
+* server.log (The factorial values can be found under 'Processed data:')
 ```
 PROGRAM_B: Request received: 1,3,5,13,14,14,15,19,19,20
 PROGRAM_B: Processed data: 
