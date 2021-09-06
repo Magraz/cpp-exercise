@@ -10,7 +10,7 @@ This repo requires to be compiled under a Linux based OS. The exercise consists 
    - This program acts as the server and reads the data sent from the client, calcultes the factorial of each number in the array, and logs the resulting array.
 
 ## How to run
-First we need to compile both files, for this we will open 2 terminals and execute the following code.
+First we need to compile both files, for this we will open 2 terminals(both terminals must be open at this repo's folder) and execute the following code.
 * Terminal #1
 ```
 g++ program_a -o program_a
@@ -19,3 +19,20 @@ g++ program_a -o program_a
 ```
 g++ program_b -o program_b
 ```
+
+Now we first run the server because otherwise the client will log "Transmission failed", and we run the client afterwards.
+* Terminal #2
+```
+./program_b <'logFileName'> <'-a' if we want to append or nothing if we want to overwrite>
+
+EXAMPLE:
+./program_b server.log 
+```
+* Terminal #1
+```
+./program_a <'logFileName'> <'-a' if we want to append or nothing if we want to overwrite>
+
+EXAMPLE:
+./program_a client.log
+```
+
