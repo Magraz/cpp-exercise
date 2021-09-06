@@ -82,8 +82,7 @@ int main(int argc, char **argv){
 
     //Create socket
     if ((sock = socket(AF_INET, SOCK_STREAM, 0)) < 0){
-        printf("\n Socket creation error \n");
-        return -1;
+        cout << "Socket creation error" << endl;
     }
 
     serv_addr.sin_family = AF_INET;
@@ -92,7 +91,6 @@ int main(int argc, char **argv){
     // Convert IPv4 and IPv6 addresses from text to binary form
     if (inet_pton(AF_INET, "127.0.0.1", &serv_addr.sin_addr) <= 0){
         cout << "Invalid address/ Address not supported" << endl; 
-        return -1;
     }
 
     //Perform connection
