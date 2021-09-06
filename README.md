@@ -27,7 +27,7 @@ Now we run the server first because otherwise the client will log "Transmission 
 
 EXAMPLES:
 ./program_b server.log 
-./program_a client.log -a
+./program_b server.log -a
 ```
 * Terminal #1
 ```
@@ -38,3 +38,53 @@ EXAMPLES:
 ./program_a client.log -a
 ```
 
+Finally to end each program we must enter a key.
+
+## Example
+We run the program
+* Terminal #2
+```
+./program_b server.log 
+```
+* Terminal #1
+```
+./program_a client.log
+```
+In this example the output would be:
+* Terminal #2 Output
+```
+./program_b server.log 
+Log file path: server.log
+Request received: 1,3,5,13,14,14,15,19,19,20
+Response sent: DONE!
+Enter any key to exit: 
+```
+* Terminal #1 Output
+```
+./program_a client.log
+Log file path: client.log
+Sending data: 1,3,5,13,14,14,15,19,19,20
+Data sent: 1,3,5,13,14,14,15,19,19,20
+Transmission succeeded message from server: DONE!
+Enter any key to exit: 
+```
+We enter the keys to exit and the logs would show the following:
+* server.log
+```
+PROGRAM_B: Request received: 1,3,5,13,14,14,15,19,19,20
+PROGRAM_B: Processed data: 
+1
+6
+120
+6227020800
+87178291200
+87178291200
+PROGRAM_B: Program finished.
+PROGRAM_B: Exit key: b
+```
+* client.log
+```
+PROGRAM_A: Transmission succeeded message from server: DONE!
+PROGRAM_A: Program finished
+PROGRAM_A: Exit key: a
+```
