@@ -41,7 +41,7 @@ EXAMPLES:
 Finally to end each program we must enter a key.
 
 ## Example
-We run the program
+We run the applications. Remembering to run program_b(server) first.
 * Terminal #2
 ```
 ./program_b server.log 
@@ -53,7 +53,6 @@ We run the program
 In this example the output would be:
 * Terminal #2 Output
 ```
-./program_b server.log 
 Log file path: server.log
 Request received: 1,3,5,13,14,14,15,19,19,20
 Response sent: DONE!
@@ -61,7 +60,6 @@ Enter any key to exit:
 ```
 * Terminal #1 Output
 ```
-./program_a client.log
 Log file path: client.log
 Sending data: 1,3,5,13,14,14,15,19,19,20
 Data sent: 1,3,5,13,14,14,15,19,19,20
