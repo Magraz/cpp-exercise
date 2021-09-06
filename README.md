@@ -20,19 +20,21 @@ g++ program_a -o program_a
 g++ program_b -o program_b
 ```
 
-Now we first run the server because otherwise the client will log "Transmission failed", and we run the client afterwards.
+Now we run the server first because otherwise the client will log "Transmission failed", and we run the client afterwards.
 * Terminal #2
 ```
 ./program_b <'logFileName'> <'-a' if we want to append or nothing if we want to overwrite>
 
-EXAMPLE:
+EXAMPLES:
 ./program_b server.log 
+./program_a client.log -a
 ```
 * Terminal #1
 ```
 ./program_a <'logFileName'> <'-a' if we want to append or nothing if we want to overwrite>
 
-EXAMPLE:
+EXAMPLES:
 ./program_a client.log
+./program_a client.log -a
 ```
 
