@@ -6,6 +6,7 @@
 #include <vector>
 #include <algorithm>
 
+//Socket libraries
 #include <sys/socket.h>
 #include <arpa/inet.h>
 #include <unistd.h>
@@ -106,12 +107,13 @@ int main(int argc, char **argv){
     cout << "Data sent: " << data << endl;
     valread = read(sock, buffer, 1024);
     cout << "Transmission succeeded message from server: " << buffer << endl; //Should read "Transmisssion succeded message from server: XXXX" when connection succeeds
-    logFile << "Transmission succeeded message from server: " << buffer << endl;
+    logFile << "PROGRAM_A: " << "Transmission succeeded message from server: " << buffer << endl;
 
     //Get exit key press and log it
-    cout << "Enter any key to exit" << endl;
+    cout << "Enter any key to exit: " << endl;
     char exitKey = getchar();
-    logFile << "Program finished" << endl << "Exit key: " << exitKey;
+    logFile << "PROGRAM_A: " << "Program finished" << endl;
+    logFile << "PROGRAM_A: " << "Exit key: " << exitKey << endl;
 
     //Close log file
     logFile.close();

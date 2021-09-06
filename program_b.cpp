@@ -3,6 +3,7 @@
 #include <sstream>
 #include <bits/stdc++.h>
 
+//Socket libraries
 #include <sys/socket.h>
 #include <unistd.h>
 #include <netinet/in.h>
@@ -104,7 +105,7 @@ int main(int argc, char **argv){
     //Read incoming request from client
     valread = read(new_socket, buffer, 1024);
     cout << "Request received: " << buffer << endl;
-    logFile << "Request received: " << buffer << endl;
+    logFile << "PROGRAM_B: " << "Request received: " << buffer << endl;
 
     //Send response to client
     send(new_socket, response, strlen(response), 0);
@@ -124,13 +125,14 @@ int main(int argc, char **argv){
     }
     
     //Log output
-    logFile << "Processed data: " << endl;
+    logFile << "PROGRAM_B: " << "Processed data: " << endl;
     for(auto x : result) logFile << x << endl;
 
     //Get exit key press and log it
-    cout << "Enter any key to exit" << endl;
+    cout << "Enter any key to exit: " << endl;
     char exitKey = getchar();
-    logFile << "Program finished." << endl << "Exit key: " << exitKey;
+    logFile << "PROGRAM_B: " << "Program finished." << endl;
+    logFile << "PROGRAM_B: " << "Exit key: " << exitKey << endl;
     
     //Close log file
     logFile.close();
